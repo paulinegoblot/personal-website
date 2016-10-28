@@ -1,130 +1,136 @@
 <!doctype html>
 <html lang="fr" ng-app="app">
-  <head>
-    <title>Pauline Goblot | Développeur Front-end Web &amp; Mobile</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Material+Icons|Chewy|Annie+Use+Your+Telescope|Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic|Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-   </head>
-   <body ng-controller="PageController as page">
-    <header>
-      <a href ng-click="page.showPage(0)">     
-        <img src="logo.png" alt="GP">
-      </a>
-    </header>      
-    <nav>
-      <ul class="nav-main">
-      <li><a href=""><i class="material-icons">close</i></a></li>
-       <li ng-class="{active : page.isCurrent(0)}">
-          <span class="text">Home</span><a href ng-click="page.showPage(0)"><i class="material-icons">home</i></a>
-        </li>
-        <li ng-class="{active : page.isCurrent(1)}">
-			<span class="text">Portfolio</span><a href ng-click="page.showPage(1)"><i class="material-icons">apps</i></a>
-        </li>
-        <li ng-class="{active : page.isCurrent(2)}">
-			<span class="text">Skills</span><a href ng-click="page.showPage(2)"><i class="material-icons">school</i></a>
-        </li>
-        <li ng-class="{active : page.isCurrent(3)}">
-			<span class="text">Hobbies</span><a href ng-click="page.showPage(3)"><i class="material-icons">favorite</i></a>
-        </li>
-        <li ng-class="{active : page.isCurrent(4)}">
-			<span class="text">Contact</span><a href ng-click="page.showPage(4)"><i class="material-icons">email</i></a>
-        </li>
-      </ul>
-    </nav>
-    <section id="home" ng-show="page.isCurrent(0)">
-      <!--<h1>Pauline Goblot</h1>-->
-      <h2>Front-end Web Developer</h2>
-      <button>Get My Resume</button>
-      <article class="lorem">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit velit neque, quis porttitor arcu hendrerit sed. Sed vestibulum odio nec mattis semper. Proin eu tellus id libero condimentum viverra quis vitae justo. Suspendisse viverra lacus non nulla tristique, sed aliquam enim viverra. Suspendisse magna mauris, facilisis a magna non, gravida elementum purus. Donec fermentum consequat tellus, vel placerat orci tristique at. Nullam fringilla sagittis tempus. Integer eu lorem vitae mi rhoncus dignissim. Phasellus nibh sem, convallis sit amet tincidunt egestas, imperdiet sed nisi. Fusce facilisis vehicula ante. Suspendisse potenti.
-        </p>
-        <p>
-          Vestibulum magna mi, ultricies non porttitor sed, ultrices in dui. Vivamus ut posuere enim, nec pulvinar odio. Vivamus at neque vitae turpis efficitur blandit. Quisque at imperdiet purus, vel congue sapien. Sed dignissim libero libero, in euismod lorem aliquam a. Nunc blandit vestibulum felis a ullamcorper. Donec consectetur velit ex, ac tincidunt velit vulputate nec. Aliquam venenatis nisl sit amet finibus varius. Curabitur vitae velit ipsum. Cras luctus auctor ante a scelerisque. In hac habitasse platea dictumst.
-        </p>
-        <p>
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis non ornare metus, eu iaculis erat. Aenean vel faucibus est. Pellentesque nibh dolor, ullamcorper sit amet fermentum quis, dignissim sed nibh. Duis luctus, tortor in fringilla molestie, justo massa tempus mauris, eget luctus tellus nisi quis ipsum. Vestibulum finibus mauris at est imperdiet scelerisque. In fringilla venenatis porta. Etiam eros odio, vehicula elementum risus sed, dignissim facilisis leo. Proin varius nulla ac ligula gravida vulputate. Phasellus dui est, feugiat in molestie a, fringilla vitae odio. Curabitur ante nulla, mattis malesuada leo eu, pulvinar placerat est.
-        </p>
-        <p>
-          Sed gravida vulputate tincidunt. Morbi fringilla quam vitae quam tristique, nec vehicula neque aliquet. Donec ac posuere dolor. Praesent at nunc augue. Mauris at orci dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed vehicula dolor eu dolor egestas, sit amet ultrices lectus fringilla. Nunc sollicitudin sollicitudin tellus, sit amet facilisis massa tristique ac. Sed in venenatis mi.
-        </p>
-        <p>
-          Proin sollicitudin condimentum lorem, et venenatis lacus suscipit non. Nulla id hendrerit nulla, id pulvinar turpis. Vivamus non iaculis turpis. Praesent dui justo, bibendum sed quam et, sollicitudin volutpat mi. Nam finibus urna non eros placerat viverra. Donec magna dolor, faucibus quis faucibus et, rhoncus a dolor. Fusce id varius neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse euismod arcu imperdiet est mattis, quis vestibulum erat blandit. Aenean convallis blandit velit non placerat. Nunc blandit, est id rhoncus gravida, ipsum leo consequat tellus, non pellentesque nisi nulla sed ex. Mauris id nisl ut ex imperdiet feugiat sed non dui.
-        </p>
-      </article>
-    </section>
-    <section id="portfolio" ng-show="page.isCurrent(1)">
-      <header>
-        <h3>Portfolio</h3>
-      </header>
-      <div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
-    </section>
-    <section id="skills" ng-show="page.isCurrent(2)">
-      <header>
-        <h3>Compétences</h3>
-      </header>
-      <div>
-        <div class="diplomas">
-          <p>
-            <span class="icon"></span>
-            <span class="title">DUT Informatique</span>
-            <span class="year">2011</span>
-          </p>
-          <p>
-            <span class="icon"></span>
-            <span class="title">Licence Professionnelle Webmaster</span>
-            <span class="year">2012</span>
-          </p>
-          <p>
-            <span class="icon"></span>
-            <span class="title">Licence Informatique</span>
-            <span class="year">2013</span>
-          </p>
-          <p>
-            <span class="icon"></span>
-            <span class="title">Master Informatique</span>
-            <span class="year">2015</span>
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="hobbies" ng-show="page.isCurrent(3)">
-      <header>
-        <h3>Intérêts</h3>
-      </header>
-      <div>
-      </div>
-    </section>
-    <section id="contact" ng-show="page.isCurrent(4)">
-      <header>
-        <h3>Contact</h3>
-      </header>
-      <div>
-        <a href=""><span class="icon"></span><span class="text">télécharger mon CV</span></a>
-        <a href=""><span class="icon"></span><span class="text">gobxxxxxxxxxxx@gmail.com</span></a>
-        <a href=""><span class="icon"></span><span class="text">+33 6 XX XX XX 49</span></a>
-        <a href=""><span class="icon"></span><span class="text">/in/PaulineGoblot</span></a>
-        <a href=""><span class="icon"></span><span class="text">goby_elfe</span></a>
-      </div>
-    </section>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
-  <script src="app.js"></script>
+	<head>
+		<title>Pauline Goblot | Développeur Front-end Web &amp; Mobile</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Material+Icons|Chewy|Annie+Use+Your+Telescope|Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic|Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	</head>
+	<body ng-controller="PageController as page">
+		<header>
+			<a href ng-click="page.showPage(0)">     
+				<img src="logo.png" alt="GP">
+			</a>
+		</header>      
+		<nav>
+			<ul class="nav-main">
+				<li><a href=""><i class="material-icons">close</i></a></li>
+				<li ng-class="{active : page.isCurrent(0)}">
+						<a href ng-click="page.showPage(0)"><i class="material-icons">home</i></a>
+						<span class="text">Home</span>
+				</li>
+				<li ng-class="{active : page.isCurrent(1)}">
+					<a href ng-click="page.showPage(1)"><i class="material-icons">apps</i></a>
+					<span class="text">Portfolio</span>
+				</li>
+				<li ng-class="{active : page.isCurrent(2)}">
+					<a href ng-click="page.showPage(2)"><i class="material-icons">school</i></a>
+					<span class="text">Skills</span>
+				</li>
+				<li ng-class="{active : page.isCurrent(3)}">
+					<a href ng-click="page.showPage(3)"><i class="material-icons">favorite</i></a>
+					<span class="text">Hobbies</span>
+				</li>
+				<li ng-class="{active : page.isCurrent(4)}">
+					<a href ng-click="page.showPage(4)"><i class="material-icons">email</i></a>
+					<span class="text">Contact</span>
+				</li>
+				<hr />
+			</ul>
+		</nav>
+		<section id="home" ng-show="page.isCurrent(0)">
+			<!--<h1>Pauline Goblot</h1>-->
+			<h2>Front-end Web Developer</h2>
+			<button>Get My Resume</button>
+			<article class="lorem">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit velit neque, quis porttitor arcu hendrerit sed. Sed vestibulum odio nec mattis semper. Proin eu tellus id libero condimentum viverra quis vitae justo. Suspendisse viverra lacus non nulla tristique, sed aliquam enim viverra. Suspendisse magna mauris, facilisis a magna non, gravida elementum purus. Donec fermentum consequat tellus, vel placerat orci tristique at. Nullam fringilla sagittis tempus. Integer eu lorem vitae mi rhoncus dignissim. Phasellus nibh sem, convallis sit amet tincidunt egestas, imperdiet sed nisi. Fusce facilisis vehicula ante. Suspendisse potenti.
+				</p>
+				<p>
+					Vestibulum magna mi, ultricies non porttitor sed, ultrices in dui. Vivamus ut posuere enim, nec pulvinar odio. Vivamus at neque vitae turpis efficitur blandit. Quisque at imperdiet purus, vel congue sapien. Sed dignissim libero libero, in euismod lorem aliquam a. Nunc blandit vestibulum felis a ullamcorper. Donec consectetur velit ex, ac tincidunt velit vulputate nec. Aliquam venenatis nisl sit amet finibus varius. Curabitur vitae velit ipsum. Cras luctus auctor ante a scelerisque. In hac habitasse platea dictumst.
+				</p>
+				<p>
+					Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis non ornare metus, eu iaculis erat. Aenean vel faucibus est. Pellentesque nibh dolor, ullamcorper sit amet fermentum quis, dignissim sed nibh. Duis luctus, tortor in fringilla molestie, justo massa tempus mauris, eget luctus tellus nisi quis ipsum. Vestibulum finibus mauris at est imperdiet scelerisque. In fringilla venenatis porta. Etiam eros odio, vehicula elementum risus sed, dignissim facilisis leo. Proin varius nulla ac ligula gravida vulputate. Phasellus dui est, feugiat in molestie a, fringilla vitae odio. Curabitur ante nulla, mattis malesuada leo eu, pulvinar placerat est.
+				</p>
+				<p>
+					Sed gravida vulputate tincidunt. Morbi fringilla quam vitae quam tristique, nec vehicula neque aliquet. Donec ac posuere dolor. Praesent at nunc augue. Mauris at orci dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed vehicula dolor eu dolor egestas, sit amet ultrices lectus fringilla. Nunc sollicitudin sollicitudin tellus, sit amet facilisis massa tristique ac. Sed in venenatis mi.
+				</p>
+				<p>
+					Proin sollicitudin condimentum lorem, et venenatis lacus suscipit non. Nulla id hendrerit nulla, id pulvinar turpis. Vivamus non iaculis turpis. Praesent dui justo, bibendum sed quam et, sollicitudin volutpat mi. Nam finibus urna non eros placerat viverra. Donec magna dolor, faucibus quis faucibus et, rhoncus a dolor. Fusce id varius neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse euismod arcu imperdiet est mattis, quis vestibulum erat blandit. Aenean convallis blandit velit non placerat. Nunc blandit, est id rhoncus gravida, ipsum leo consequat tellus, non pellentesque nisi nulla sed ex. Mauris id nisl ut ex imperdiet feugiat sed non dui.
+				</p>
+			</article>
+		</section>
+		<section id="portfolio" ng-show="page.isCurrent(1)">
+			<header>
+				<h3>Portfolio</h3>
+			</header>
+			<div>
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+		</section>
+		<section id="skills" ng-show="page.isCurrent(2)">
+			<header>
+				<h3>Compétences</h3>
+			</header>
+			<div>
+				<div class="diplomas">
+					<p>
+						<span class="icon"></span>
+						<span class="title">DUT Informatique</span>
+						<span class="year">2011</span>
+					</p>
+					<p>
+						<span class="icon"></span>
+						<span class="title">Licence Professionnelle Webmaster</span>
+						<span class="year">2012</span>
+					</p>
+					<p>
+						<span class="icon"></span>
+						<span class="title">Licence Informatique</span>
+						<span class="year">2013</span>
+					</p>
+					<p>
+						<span class="icon"></span>
+						<span class="title">Master Informatique</span>
+						<span class="year">2015</span>
+					</p>
+				</div>
+			</div>
+		</section>
+		<section id="hobbies" ng-show="page.isCurrent(3)">
+			<header>
+				<h3>Intérêts</h3>
+			</header>
+			<div>
+			</div>
+		</section>
+		<section id="contact" ng-show="page.isCurrent(4)">
+			<header>
+				<h3>Contact</h3>
+			</header>
+			<div>
+				<a href=""><span class="icon"></span><span class="text">télécharger mon CV</span></a>
+				<a href=""><span class="icon"></span><span class="text">gobxxxxxxxxxxx@gmail.com</span></a>
+				<a href=""><span class="icon"></span><span class="text">+33 6 XX XX XX 49</span></a>
+				<a href=""><span class="icon"></span><span class="text">/in/PaulineGoblot</span></a>
+				<a href=""><span class="icon"></span><span class="text">goby_elfe</span></a>
+			</div>
+		</section>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+	<script src="app.js"></script>
 </html>
